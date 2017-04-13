@@ -1,0 +1,198 @@
+
+.searchwrap {
+	text-align: center;
+}
+
+.search #q,
+.search #s {
+	display: inline-block;
+	padding: 5px;
+}
+
+.search * {
+	font-size: 12px;
+}
+
+.search {
+	font-size: 0;
+	left: 115px;
+	top: 160px;
+	display: inline-block;
+	text-align: left;
+	overflow: hidden;
+	width: 400px;
+}
+
+.search #q {
+	width: 320px;
+	border: 1px solid #ccc;
+}
+
+.search #q.nr {
+	background: #eee;
+}
+
+.search #s {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	background: #ccc;
+	width: 80px;
+}
+
+.search .dropdown {
+	list-style: none;
+	padding: 0;
+	display: none;
+	background: white;
+	position: absolute;
+	box-shadow: 0 2px 5px #999;
+	width: 320px;
+}
+
+.search .dropdown li {
+	padding: 3px 5px;
+}
+
+.search .dropdown li:hover {
+	background: #eee;
+}
+
+.search .dropdown li b {
+	font-weight: normal;
+	color: red;
+}
+
+.search .dropdown li.selected {
+	background: #eee;
+}
+
+.search .dropdown dd {
+	color: #999;
+}
+
+.search .dropdown .highlight {
+	color: red;
+}
+
+.tips {
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+}
+
+.tips .loading {
+	animation: flash 1s infinite linear;
+}
+
+@keyframes flash {
+	50% {
+		opacity: 0
+	}
+
+}
+
+/* result.html */
+.list {
+	font-size: 12px;
+	border-collapse: collapse;
+	margin: 30px auto;
+}
+
+.list thead tr {
+	background: #2980b9;
+	color: white;
+}
+
+.list tr {
+	color: #7c7c7c;
+}
+
+.list th,
+.list td {
+	text-align: left;
+	padding: 10px 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.list .chn {
+	width: 150px;
+}
+
+.list .good {
+	width: 200px;
+}
+
+.list .jpn {
+	width: 150px;
+}
+
+.list .link {
+	width: 50px;
+	text-align: center;
+}
+
+.list td mark {
+	background: none;
+	color: red;
+}
+
+.list tbody tr:nth-child(even) {
+	background: #f7f7f7;
+}
+
+.list tbody tr:hover {
+	background: beige;
+}
+
+.list tbody .link a {
+	background: #2980b9;
+	border-radius: 2px;
+	color: white;
+	padding: 3px 10px
+}
+
+.list tbody .link a.unavailable {
+	background: gray;
+}
+
+.title {
+	color: #999;
+	font-size: 9px;
+}
+
+.pager {
+	text-align: center;
+}
+
+.pager ul {
+	overflow: hidden;
+	display: inline-block;
+}
+
+.pager ul li {
+	float: left;
+	width: 35px;
+	margin: 0 4px;
+	border: 1px solid #eee;
+	padding: 2px 0
+}
+
+.pager ul li:hover {
+	background: ivory;
+}
+
+.pager ul li a {
+	display: block;
+	font-size: 12px;
+	color: #999;
+}
+
+p .home {
+	background: #c2e09c;
+	color: #333;
+	font-size: 9px;
+	padding: 2px 5px;
+}
