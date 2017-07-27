@@ -1,0 +1,124 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* STYLES GO HERE */
+    /*aboutus*/
+    .aboutBack {
+        margin-top: 48px;
+        background-size: 140% 100%;
+    }
+    .defaultFontColor {
+        font-size: 14px;
+    }
+    .aboutSecondRow {
+        margin-bottom: 40px;
+    }
+    .aboutSecondRow img {
+        margin-bottom:
+    }
+    .img-responsive img {
+        height: ;
+    }
+}
+
+.lu_container {
+    padding: 2em;
+    background-color: #f4f9ff;
+    height: 900px;
+}
+
+.lu_confirmloginleft {
+    border-radius: 8px;
+    background-color: #fff;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 12px;
+    box-shadow: 2px 2px 1px #f6f6f6;
+}
+
+.lu_confirmloginleft_header {
+    background-color: #3f5771;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.lu_confirmloginright {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 280px;
+    padding: 20px 30px;
+    box-shadow: 2px 2px 1px #f6f6f6;
+}
+
+.lu_confirmloginright_header {
+    padding-bottom: 12px;
+}
+
+.lu_confirmloginleft_subheader {
+    background-color: #fff;
+    padding: 20px;
+    color: #898989;
+    font-size: 12px;
+}
+
+.lu_clg_input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.lu_clg_devider {
+    background-color: #dfdfdf;
+    height: 1px;
+    width: 100%;
+}
+
+.lu_clg_devider_md {
+    background-color: #dfdfdf;
+    height: 1px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.lu_clg_input_button {
+    background-color: #1fb549;
+    padding: 12px;
+    text-align: center;
+    width: 30%;
+    border-radius: 8px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.lu_clg_form_container {
+    padding: 20px 20px 0 20px;
+}
+
+.lu_clg_form_container p {
+    color: red;
+}
+
+.lu_clg_r_text {
+    color: #898989;
+    font-size: 12px;
+}
+
+.lu_clg_r_footer {
+    padding: 0px;
+    color: #898989;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.lu_clg_r_footer_lf {
+    flex: 1;
+}
+
+.lu_clg_form_tl {
+    display: flex;
+}
