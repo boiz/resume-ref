@@ -17,17 +17,19 @@ function openInbox(cb) {
   imap.openBox('INBOX', true, cb);
 }
 
+function getMail(){
+
 imap.once('ready', function() {
   openInbox(function(err, box) {
 
   	//console.log("box:",box);
 
     if (err) throw err;
+
     var f = imap.seq.fetch(box.messages.total, {
       bodies: ['HEADER.FIELDS (FROM TO SUBJECT DATE)',"TEXT"],
       struct: true
     });
-
     f.on('message', function(msg, seqno) {
       //console.log('Message #', seqno);
       var prefix = '(#' + seqno + ') ';
@@ -37,16 +39,24 @@ imap.once('ready', function() {
 
         stream.on('data', function(chunk) {
           buffer += chunk.toString('utf8');
-          
-
           	simpleParser(buffer, (err, mail)=>{
-  
-				//console.log("mail seqno#",seqno);
+				//console.log("mail seqnoID:",seqno);
           		//console.log("info.witch:",info.which);
-          		if(mail.subject) console.log("subject:",mail.subject);
+
+          		if(mail.subject) /*console.log("subject:",mail.subject, " from:", mail.from.text, " date:", mail.date) ;*/
+
+          		console.log({
+          			mailID:seqno,
+          			subject:mail.subject,
+          			from:mail.from.text,
+          			date:mail.date
+          		});
           		if(mail.text){
           			//console.log("text",mail.text);
-          			mail.text.indexOf("Body message")>=0?console.log("found text"):console.log("not found");
+
+          			var keyword="Body message";
+          			if(mail.text.indexOf(keyword)>=0) console.log("found text ",keyword);
+          			else console.log("not found ",keyword);
           		}
 /*		        fs.appendFile('index.html', JSON.stringify(mail), function (err) {
 		          if (err) throw err;
@@ -87,3 +97,7 @@ imap.once('end', function() {
 });
 
 imap.connect();
+
+}
+
+setInterval(getMail,10000);
